@@ -13,8 +13,8 @@ public class Recipe {
 
     private String name;
 
-    @Column(columnDefinition = "TEXT")
-    private String description;
+    @Column(columnDefinition = "TEXT[]")
+    private String[] description;
 
     @ElementCollection
     @CollectionTable(name = "recipe_ingredients", joinColumns = @JoinColumn(name = "recipe_id"))
@@ -25,9 +25,10 @@ public class Recipe {
 
     public Recipe(String name) {
         this.name = name;
+        this.description = new String[0];
     }
 
-    public Recipe(String name, String description) {
+    public Recipe(String name, String[] description) {
         this.name = name;
         this.description = description;
     }
@@ -45,19 +46,27 @@ public class Recipe {
         ingredients.remove(ingredient);
     }
 
-    /*public String toString() {
-        return name + "\nGör så här: " + description + "\nIngredienser: " + ingredientsToString();
-    }*/
+    public String toString() {
+        return name + "\nGör så här: " + descriptionToString() + "\nIngredienser: " + ingredientsToString();
+    }
 
-    /*public String ingredientsToString() {
-
+    public String ingredientsToString() {
         StringBuilder sb = new StringBuilder();
 
-        for(String s : ingredients.keySet() ) {
-            sb.append(s).append("\n");
+        for(Ingredient i : ingredients.keySet() ) {
+            sb.append(ingredients.get(i)).append(" ").append(i.getName()).append("\n");
         }
         return sb.toString();
-    }*/
+    }
+
+    private String descriptionToString() {
+        StringBuilder descriptionString = new StringBuilder();
+
+        for(String s : description) {
+            descriptionString.append(s + "\n");
+        }
+        return descriptionString.toString();
+    }
 
     public String getName(){
         return name;
@@ -69,11 +78,13 @@ public class Recipe {
         this.name = name;
     }
 
-    public String getDescription() {
+    public String[] getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+
+
+    public void setDescription(String[] description) {
         this.description = description;
     }
 
