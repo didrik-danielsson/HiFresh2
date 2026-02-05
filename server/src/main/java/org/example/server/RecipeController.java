@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/recipes")
 public class RecipeController {
@@ -18,25 +18,37 @@ public class RecipeController {
     @Autowired
     private final RecipeService recipeService = new RecipeService();
 
+    //Post-metod
     @PostMapping
     public Recipe createRecipe(@RequestBody Recipe recipe) {
         return recipeService.saveRecipeWithIngredients(recipe);
     }
-    @PostMapping("/delete")
+
+    //Delete-metoder
+    @DeleteMapping("/delete")
     public void removeRecipe(@RequestBody String recipeName) {
         recipeService.removeRecipeByName(recipeName);
     }
+
+    @DeleteMapping
+    public void removeRecipe(@RequestBody long id) {
+        recipeService.removeRecipeById(id);
+    }
+
+    //Get-metoder för recept
     @GetMapping
     public List<Recipe> getAllRecipes() {
         return recipeService.findAllRecipes();
     }
 
-    public Recipe getRecipeByName(String recipeName) {
+    @GetMapping("/name/{name}")
+    public Recipe getRecipeByName(@PathVariable String recipeName) {
         return recipeService.getRecipeByName(recipeName);
     }
 
-    public Recipe getRecipeById(Recipe recipe) {
-        return recipeService.getRecipeById(recipe.getId());
+    @GetMapping ("/{id}")
+    public Recipe getRecipeById(@PathVariable long id) {
+        return recipeService.getRecipeById(id);
     }
 }
 

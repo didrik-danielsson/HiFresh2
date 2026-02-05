@@ -43,4 +43,7 @@ public class RecipeService {
         recipeRepo.delete(getRecipeByName(recipeName));
 
     }
+    public void removeRecipeById(Long id) {
+        recipeRepo.deleteById(id);
+    }
 }
