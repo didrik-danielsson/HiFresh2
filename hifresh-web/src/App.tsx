@@ -1,54 +1,41 @@
-import { useEffect, useState } from 'react';
-import { recipeService } from './API/recipeService';
-import type {Recipe} from './types';
+
+import './App.css';
+import { HashRouter as Router, Routes, Route} from "react-router-dom";
+import {HomePage} from "./Pages/HomePage.tsx";
+import {AddRecipeForm} from "./Pages/AddRecipeForm.tsx";
+import {MenuPage} from "./Pages/MenuPage.tsx";
+import { RemoveRecipe } from "./Pages/RemoveRecipe.tsx";
+import {Layout} from "./Layout.tsx";
+import {AllRecipesPage} from "./Pages/AllRecipes.tsx";
+import { LoginPage } from "./Pages/LoginPage.tsx"
+import {IngredientsPage} from "./Pages/IngredientsPage.tsx";
+
+
 
 function App() {
-    // State: här sparar vi recepten när de väl har hämtats
-    const [recipes, setRecipes] = useState<Recipe[]>([]);
-    // State: för att visa en laddnings-snurra eller text
-    const [loading, setLoading] = useState<boolean>(true);
-    // State: om något går fel (t.ex. servern är nere)
-    const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
-        // Denna kod körs EN gång när komponenten startar
-        recipeService.getAllRecipes()
-            .then(data => {
-                setRecipes(data);
-                setLoading(false);
-            })
-            .catch(err => {
-                setError(err.message);
-                setLoading(false);
-            });
-    }, []); // Den tomma arrayen [] betyder "kör bara vid start"
+return (
 
-    if (loading) return <p>Hämtar recept...</p>;
-    if (error) return <p style={{ color: 'red' }}>Fel: {error}</p>;
+        <div className={"App"}>
 
-    return (
-        <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
-            <h1>HiFresh Recept</h1>
-
-            <div className="recipe-list">
-                {recipes.map(recipe => (
-                    <div key={recipe.id} style={cardStyle}>
-                        <h3>{recipe.name}</h3>
-                        <p>{recipe.description[0]?.substring(0, 50)}...</p>
-                    </div>
-                ))}
-            </div>
+        <Router>
+                <Routes>
+                    <Route element={<Layout/>}>
+                        <Route path="/" element={<HomePage />}/>
+                        <Route path="/lägg till recept" element={<AddRecipeForm/>}/>
+                        <Route path={"/Recept"} element={<AllRecipesPage/>}/>
+                        <Route path="/Menyer" element={<MenuPage/>}/>
+                        <Route path="/Remove" element={<RemoveRecipe/>}/>
+                        <Route path={"/Login"} element={<LoginPage/>}/>
+                        <Route path={"/Ingredienser"} element={<IngredientsPage/>}/>
+                    </Route>
+                </Routes>
+        </Router>
         </div>
-    );
+
+    )
 }
 
-// Enkel styling direkt i JS för att testa
-const cardStyle = {
-    border: '1px solid #ddd',
-    borderRadius: '8px',
-    padding: '15px',
-    marginBottom: '10px',
-    backgroundColor: '#f9f9f9'
-};
+
 
 export default App;
