@@ -17,8 +17,15 @@ public class Recipe {
     private String[] description;
 
     @ElementCollection
-    @CollectionTable(name = "recipe_ingredients", joinColumns = @JoinColumn(name = "recipe_id"))
-    @MapKeyColumn(name = "ingredient_name")
+    @CollectionTable(
+            name = "recipe_ingredients",
+            joinColumns = @JoinColumn(name = "recipe_id")
+    )
+    @MapKeyJoinColumn(name = "ingredient_id")
+    @AttributeOverrides({
+            @AttributeOverride(name = "amount", column = @Column(name = "amount")),
+            @AttributeOverride(name = "unit", column = @Column(name = "unit"))
+    })
     Map<Ingredient, IngredientAmount> ingredients = new HashMap<>();
 
     public Recipe() {}
@@ -82,8 +89,6 @@ public class Recipe {
         return description;
     }
 
-
-
     public void setDescription(String[] description) {
         this.description = description;
     }
@@ -94,7 +99,10 @@ public class Recipe {
 
     // Uppdatera din setter så den matchar namnet på fältet
     public void setIngredients(Map<Ingredient, IngredientAmount> ingredients) {
-        this.ingredients = ingredients;
+        this.ingredients.clear();
+            if (ingredients != null) {
+                this.ingredients.putAll(ingredients);
+            }
     }
 
 }
