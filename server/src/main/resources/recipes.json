@@ -1,0 +1,676 @@
+[ {
+  "name" : "Grillkorv",
+  "description" : [ "0:Grilla korven" ],
+  "ingredients" : {
+    "grillkorv" : {
+      "amount" : 600.0,
+      "unit" : "G"
+    },
+    "bröd" : {
+      "amount" : 4.0,
+      "unit" : "ST"
+    }
+  }
+}, {
+  "name" : "Tacos",
+  "description" : [ "Stek färsen", "Hacka grönsaker", "Servera" ],
+  "ingredients" : {
+    "nötfärs" : {
+      "amount" : 500.0,
+      "unit" : "GRAM"
+    },
+    "tacokrydda" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "salsa" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    }
+  }
+}, {
+  "name" : "Pannkakor",
+  "description" : [ "Vispa smeten", "Stek tunna pannkakor", "Servera med sylt" ],
+  "ingredients" : {
+    "smör" : {
+      "amount" : 50.0,
+      "unit" : "GRAM"
+    },
+    "vetemjöl" : {
+      "amount" : 3.0,
+      "unit" : "DL"
+    },
+    "ägg" : {
+      "amount" : 3.0,
+      "unit" : "ST"
+    },
+    "mjölk" : {
+      "amount" : 6.0,
+      "unit" : "DL"
+    }
+  }
+}, {
+  "name" : "Palak paneer med tomat och halloumi",
+  "description" : [ "Koka riset enligt anvisningen på förpackningen.", "Skala lök och vitlök. Skär gula löken och tomaterna i klyftor. Skiva vitlöken. Skala och riv ingefäran fint på ett rivjärn.", "Hetta upp hälften av olivoljan i en stekgryta eller kastrull. Fräs lök, vitlök, ingefära, tomatpuré och garam masala 3-4 minuter.", "Tillsätt tomater, krossade tomater, vatten, grädde och smulad buljongtärning. Låt sjuda 6-7 minuter. Vänd ner spenaten.", "Skär osten i tärningar och stek dem gyllene i resten av olivoljan i en stekpanna.", "Blanda ner osten i grytan och smaka av med salt. Servera med ris." ],
+  "ingredients" : {
+    "vispgrädde" : {
+      "amount" : 2.0,
+      "unit" : "DL"
+    },
+    "salt" : {
+      "amount" : 2.0,
+      "unit" : "KRM"
+    },
+    "krossade tomater" : {
+      "amount" : 390.0,
+      "unit" : "GRAM"
+    },
+    "tomatpuré" : {
+      "amount" : 2.0,
+      "unit" : "MSK"
+    },
+    "garam masala" : {
+      "amount" : 1.0,
+      "unit" : "MSK"
+    },
+    "spenat" : {
+      "amount" : 200.0,
+      "unit" : "GRAM"
+    },
+    "halloumi" : {
+      "amount" : 400.0,
+      "unit" : "G"
+    },
+    "gul lök" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "grönsaksbuljong" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "tomater" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "vitlök" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "ris" : {
+      "amount" : 4.0,
+      "unit" : "PORT"
+    },
+    "ingefära" : {
+      "amount" : 2.0,
+      "unit" : "MSK"
+    },
+    "olivolja" : {
+      "amount" : 3.0,
+      "unit" : "MSK"
+    },
+    "vatten" : {
+      "amount" : 1.0,
+      "unit" : "DL"
+    }
+  }
+}, {
+  "name" : "Tofu stir fry med cashewnötter",
+  "description" : [ "Riv vitlöks och ingefära och blanda ihop alla ingredienser till såsen. Ställ åt sidan", "Häll cirka 1 deciliter olja i woken. Lägg i cashewnötterna och fritera gyllene. Ta upp nötterna med hålslev och lägg upp på ett fat", "Skär tofun i 2 centimeter stora bitar. Vänd i majsstärkelse så att all tofu täcks av stärkelse", "Lägg tofu i woken och låt fräsa utan att röra runt. Vänd på tofun först när stekytan blivit gyllene och lite frasig. Fortsätt tills alla sidor är frasiga och gyllene. Ta upp tofun ur woken och lägg på trippelt hushållspapper. Ställ åt sidan", "Skriva lök, strimla paprika och skär salladslök i 3 cm stora bitar", "Höj värmen på spisen och låt woken bli rykande het. Lägg ner grönsakerna och woka i 2 minuter.", "Häll på såsen och låt puttra i några sekunder tills den tjocknar. Lägg tillbaka tofu och cashewnötter i woken och vänd runt", "Toppa med koriander och eventuellt extra cashew. Servera med jasminris" ],
+  "ingredients" : {
+    "majsstärkelse" : {
+      "amount" : 1.0,
+      "unit" : "TSK"
+    },
+    "soja" : {
+      "amount" : 5.0,
+      "unit" : "MSK"
+    },
+    "röd paprika" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "neutral olja" : {
+      "amount" : 1.0,
+      "unit" : "DL"
+    },
+    "sriracha" : {
+      "amount" : 2.0,
+      "unit" : "TSK"
+    },
+    "cashewnötter" : {
+      "amount" : 2.0,
+      "unit" : "DL"
+    },
+    "koriander" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "gul lök" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "salladslök" : {
+      "amount" : 4.0,
+      "unit" : "ST"
+    },
+    "vitlök" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "tofu" : {
+      "amount" : 400.0,
+      "unit" : "GRAM"
+    },
+    "ingefära" : {
+      "amount" : 1.0,
+      "unit" : "MSK"
+    },
+    "strösocker" : {
+      "amount" : 2.0,
+      "unit" : "MSK"
+    },
+    "risvinäger" : {
+      "amount" : 2.0,
+      "unit" : "MSK"
+    }
+  }
+}, {
+  "name" : "Tom Kha Gai med tofu",
+  "description" : [ "Skär tofun i tärningar. Skiva champinjoner, finhacka chili och strimla salladslöken.", "Koka upp kokosmjölk och vatten (eller buljong) i en kastrull.", "Tillsätt ingefära, citrongräs och chili. Låt sjuda i ca 5 minuter.", "Lägg i tofu och champinjoner och sjud i ytterligare 5 minuter.", "Rör ner fisksås (eller sojasås), socker och pressad lime. Smaka av.", "Toppa med salladslök och färsk koriander vid servering." ],
+  "ingredients" : {
+    "champinjoner" : {
+      "amount" : 200.0,
+      "unit" : "GRAM"
+    },
+    "citrongräs" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "limesaft" : {
+      "amount" : 2.0,
+      "unit" : "MSK"
+    },
+    "koriander" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "sojasås" : {
+      "amount" : 2.0,
+      "unit" : "MSK"
+    },
+    "salladslök" : {
+      "amount" : 3.0,
+      "unit" : "ST"
+    },
+    "röd chili" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "socker" : {
+      "amount" : 1.0,
+      "unit" : "TSK"
+    },
+    "tofu" : {
+      "amount" : 400.0,
+      "unit" : "GRAM"
+    },
+    "kokosmjölk" : {
+      "amount" : 400.0,
+      "unit" : "ML"
+    },
+    "vatten" : {
+      "amount" : 4.0,
+      "unit" : "DL"
+    },
+    "ingefära" : {
+      "amount" : 2.0,
+      "unit" : "MSK"
+    }
+  }
+}, {
+  "name" : "Vegetarisk linsbowl",
+  "description" : [ "Banka citrongräset och fräs i smör. Tillsätt vatten, ris och salt. Sjud i 14 min och låt vila i 10 min. Ta bort citrongräset.", "Klyfta citrusfrukt. Finriv vitlök och oskalad ingefära. Häll av och skölj linserna.", "Blanda citrusfruktsaft, vitlök, ingefära, socker, woksås, sojasås och olivolja till en marinad.", "Hetta upp olja och stek linserna i 2–3 min. Tillsätt marinaden och sjud i 6–8 min tills såsen tjocknat.", "Tärna mango, kvarta rädisor och riv morot grovt. Grovhacka mynta och koriander. Blanda srirachamajonnäs med lite vatten.", "Servera riset i skålar toppat med linser, mango, morot och rädisor. Ringla över srirachamajonnäs, nötter och färska örter." ],
+  "ingredients" : {
+    "saltade jordnötter" : {
+      "amount" : 40.0,
+      "unit" : "GRAM"
+    },
+    "morot" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "vitlöksklyfta" : {
+      "amount" : 4.0,
+      "unit" : "ST"
+    },
+    "asiatisk woksås" : {
+      "amount" : 150.0,
+      "unit" : "GRAM"
+    },
+    "mango" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "citrusfrukt" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "citrongräs" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "sojasås" : {
+      "amount" : 40.0,
+      "unit" : "ML"
+    },
+    "rädisor" : {
+      "amount" : 125.0,
+      "unit" : "GRAM"
+    },
+    "gröna linser" : {
+      "amount" : 780.0,
+      "unit" : "GRAM"
+    },
+    "vegansk srirachamajonnäs" : {
+      "amount" : 100.0,
+      "unit" : "GRAM"
+    },
+    "långkornigt vitt ris" : {
+      "amount" : 300.0,
+      "unit" : "GRAM"
+    },
+    "ingefära" : {
+      "amount" : 4.0,
+      "unit" : "TSK"
+    },
+    "mynta & koriander" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    }
+  }
+}, {
+  "name" : "Tikka masala på kikärtor",
+  "description" : [ "Koka basmatiriset i 10 min och låt vila under lock i ytterligare 10 min.", "Finhacka och stek lök mjuk. Tillsätt ingefärspasta, kryddor (Milda Mahal, Curry-On, Tikka masala) och tomatpuré. Tillsätt vatten och sjud under lock i 10 min.", "Skölj kikärtor, tärna gurka och skär tortillas i 3 cm breda band. Klyfta citrusfrukt.", "Vänd tortillabanden i korianderolja (hälften av koriandern + olja) och rosta i ugnen på 220°C i 4–6 min.", "Rör ner kikärtor och matlagningsgrädde i såsen och sjud 5–6 min. Smaka av med citrussaft.", "Servera tikka masala med ris, en klick yoghurt, gurksallad och krispiga tortillachips." ],
+  "ingredients" : {
+    "matlagningsgrädde" : {
+      "amount" : 300.0,
+      "unit" : "ML"
+    },
+    "lök" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "tomatpuré" : {
+      "amount" : 70.0,
+      "unit" : "GRAM"
+    },
+    "curry on" : {
+      "amount" : 8.0,
+      "unit" : "GRAM"
+    },
+    "basmatiris" : {
+      "amount" : 300.0,
+      "unit" : "GRAM"
+    },
+    "ingefärspasta" : {
+      "amount" : 20.0,
+      "unit" : "GRAM"
+    },
+    "citrusfrukt" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "koriander" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "tikka masala" : {
+      "amount" : 60.0,
+      "unit" : "GRAM"
+    },
+    "milda mahal" : {
+      "amount" : 8.0,
+      "unit" : "GRAM"
+    },
+    "gurka" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "yoghurt" : {
+      "amount" : 150.0,
+      "unit" : "GRAM"
+    },
+    "kikärtor" : {
+      "amount" : 780.0,
+      "unit" : "GRAM"
+    },
+    "tortillabröd" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    }
+  }
+}, {
+  "name" : "Poke bowl på tofu",
+  "description" : [ "Finhacka vitlök, fräs i olja, tillsätt vatten, ris och salt. Sjud under lock i 12 min och låt vila i 10 min.", "Skär citrusfrukt i klyftor. Blanda sojasås, honung- och ingefärsdressing och citrussaft till en sås.", "Skär gurka i skivor och skala morot i långa band med en potatisskalare.", "Skala, kärna ur och tärna mangon i 1 cm stora bitar.", "Tärna tofun och stek i olja 3-4 min per sida tills brynt. Ta av från värme och rör ner såsen.", "Servera vitlöksriset i skålar med tofu, grönsaker och mango. Toppa med ponzu, mynta, nötter och srirachamajonnäs." ],
+  "ingredients" : {
+    "saltade jordnötter" : {
+      "amount" : 40.0,
+      "unit" : "GRAM"
+    },
+    "morot" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "vitlöksklyfta" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "honung- & ingefärsdressing" : {
+      "amount" : 50.0,
+      "unit" : "GRAM"
+    },
+    "mango" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "ponzudressing" : {
+      "amount" : 30.0,
+      "unit" : "ML"
+    },
+    "citrusfrukt" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "sojasås" : {
+      "amount" : 40.0,
+      "unit" : "ML"
+    },
+    "jasminris" : {
+      "amount" : 300.0,
+      "unit" : "GRAM"
+    },
+    "mynta" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "gurka" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "vegansk srirachamajonnäs" : {
+      "amount" : 100.0,
+      "unit" : "GRAM"
+    },
+    "tofu" : {
+      "amount" : 360.0,
+      "unit" : "GRAM"
+    }
+  }
+}, {
+  "name" : "Tortillas med kyckling och za'atar-smör",
+  "description" : [ "Värm ugnen till 220°C. Finhacka persilja och grovhacka gurka och tomat.", "Skär apelsin i bitar. Blanda persilja, tomat, apelsin och gurka i en skål med olivolja och kryddor.", "Skär lök i skivor. Stek lök och plantbaserade kycklingbitar med Saha-Ras i 3–4 min tills de är brynta.", "Värm tortillas i mikro (30–60 sek) eller täckta med folie i ugnen (4–5 min).", "Blanda za'atar, smör och olivolja. Värm i mikron eller kastrull och pensla ena sidan av dina tortillas.", "Toppa tortillas med kycklingbitar, apelsinsallad och crème fraiche. Servera med resterande sallad." ],
+  "ingredients" : {
+    "lök" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "crème fraiche" : {
+      "amount" : 150.0,
+      "unit" : "ML"
+    },
+    "tomat" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "minitortillas" : {
+      "amount" : 16.0,
+      "unit" : "ST"
+    },
+    "za'atar" : {
+      "amount" : 8.0,
+      "unit" : "GRAM"
+    },
+    "saha-ras" : {
+      "amount" : 8.0,
+      "unit" : "GRAM"
+    },
+    "gurka" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "plantbaserade kycklingbitar" : {
+      "amount" : 400.0,
+      "unit" : "GRAM"
+    },
+    "bladpersilja" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "apelsin" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    }
+  }
+}, {
+  "name" : "Morots- och halloumibiffar",
+  "description" : [ "Riv morötter och halloumi grovt.", "Blanda rivet med ägg, ströbröd, pressad vitlök, salt och peppar.", "Låt smeten svälla i ca 10 minuter.", "Forma till biffar och stek i olja på medelvärme tills de är gyllenbruna.", "Servera med t.ex. mathavre och en kall sås." ],
+  "ingredients" : {
+    "vitlöksklyfta" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "halloumi" : {
+      "amount" : 200.0,
+      "unit" : "GRAM"
+    },
+    "salt" : {
+      "amount" : 0.5,
+      "unit" : "TSK"
+    },
+    "ägg" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "ströbröd" : {
+      "amount" : 0.5,
+      "unit" : "DL"
+    },
+    "svartpeppar" : {
+      "amount" : 1.0,
+      "unit" : "KRM"
+    },
+    "morötter" : {
+      "amount" : 500.0,
+      "unit" : "GRAM"
+    },
+    "rapsolja" : {
+      "amount" : 2.0,
+      "unit" : "MSK"
+    }
+  }
+}, {
+  "name" : "Kikartscaesar",
+  "description" : [ "Sätt ugnen på 225°C. Skölj kikärtorna och torka dem torra.", "Blanda kikärtor med olja och salt. Rosta i ugnen ca 20 min tills krispiga.", "Mixa ingredienserna till dressingen (majonnäs, senap, citron, vitlök).", "Skär brödet i tärningar och stek i smör till krutonger.", "Vänd ihop romansallad med dressing, krutonger och krispiga kikärtor." ],
+  "ingredients" : {
+    "vitlöksklyfta" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "smör" : {
+      "amount" : 25.0,
+      "unit" : "GRAM"
+    },
+    "citronjuice" : {
+      "amount" : 1.0,
+      "unit" : "MSK"
+    },
+    "salt" : {
+      "amount" : 1.0,
+      "unit" : "KRM"
+    },
+    "majonnäs" : {
+      "amount" : 1.0,
+      "unit" : "DL"
+    },
+    "romansallad" : {
+      "amount" : 250.0,
+      "unit" : "GRAM"
+    },
+    "kikärtor" : {
+      "amount" : 380.0,
+      "unit" : "GRAM"
+    },
+    "dijonsenap" : {
+      "amount" : 1.0,
+      "unit" : "TSK"
+    },
+    "brödskivor" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "rapsolja" : {
+      "amount" : 2.0,
+      "unit" : "MSK"
+    }
+  }
+}, {
+  "name" : "Pasta med soltorkade tomater",
+  "description" : [ "Koka pastan enligt anvisning på förpackningen.", "Strimla de soltorkade tomaterna och finhacka vitlöken.", "Fräs tomater och vitlök i lite olja från tomatburken.", "Häll på grädde och låt sjuda i några minuter. Smaka av med salt och peppar.", "Blanda ner den kokta pastan i såsen och vänd ner färsk spenat." ],
+  "ingredients" : {
+    "soltorkade tomater" : {
+      "amount" : 100.0,
+      "unit" : "GRAM"
+    },
+    "vitlöksklyfta" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "bladspenat" : {
+      "amount" : 65.0,
+      "unit" : "GRAM"
+    },
+    "vispgrädde" : {
+      "amount" : 2.5,
+      "unit" : "DL"
+    },
+    "salt" : {
+      "amount" : 1.0,
+      "unit" : "TSK"
+    },
+    "pasta" : {
+      "amount" : 400.0,
+      "unit" : "GRAM"
+    },
+    "svartpeppar" : {
+      "amount" : 1.0,
+      "unit" : "KRM"
+    }
+  }
+}, {
+  "name" : "Asiatisk nudelsallad",
+  "description" : [ "Koka nudlarna enligt anvisning och spola dem kalla.", "Strimla gurka, sockerärtor och lök. Hyvla morötterna.", "Mixa ingredienserna till dressingen slät.", "Tärna tofun, vänd i majsstärkelse och stek krispig.", "Blanda nudlar, grönsaker och dressing. Toppa med tofu och nötter." ],
+  "ingredients" : {
+    "majsstärkelse" : {
+      "amount" : 2.0,
+      "unit" : "MSK"
+    },
+    "morot" : {
+      "amount" : 200.0,
+      "unit" : "GRAM"
+    },
+    "soja" : {
+      "amount" : 1.0,
+      "unit" : "MSK"
+    },
+    "lime" : {
+      "amount" : 0.5,
+      "unit" : "ST"
+    },
+    "glasnudlar" : {
+      "amount" : 100.0,
+      "unit" : "GRAM"
+    },
+    "jordnötter" : {
+      "amount" : 1.0,
+      "unit" : "DL"
+    },
+    "rapsolja" : {
+      "amount" : 2.0,
+      "unit" : "MSK"
+    },
+    "sockerärtor" : {
+      "amount" : 150.0,
+      "unit" : "GRAM"
+    },
+    "bladspenat" : {
+      "amount" : 65.0,
+      "unit" : "GRAM"
+    },
+    "salladslök" : {
+      "amount" : 60.0,
+      "unit" : "GRAM"
+    },
+    "gurka" : {
+      "amount" : 0.5,
+      "unit" : "ST"
+    },
+    "tofu" : {
+      "amount" : 200.0,
+      "unit" : "GRAM"
+    },
+    "ingefära" : {
+      "amount" : 1.0,
+      "unit" : "MSK"
+    }
+  }
+}, {
+  "name" : "Vegansk/Vegetarisk Lasagne",
+  "description" : [ "Fräs lök, vitlök och vegofärs i olja.", "Tillsätt tomatpuré, krossade tomater och buljong. Koka 10 min.", "Gör ostsås: Smält smör, vispa ner mjöl och mjölk. Koka 5 min och rör ner parmesan.", "Varva vegofärssås, ostsås och lasagneplattor i en form.", "Grädda i ugnen på 175°C i ca 40 min." ],
+  "ingredients" : {
+    "smör" : {
+      "amount" : 90.0,
+      "unit" : "GRAM"
+    },
+    "gul lök" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "krossade tomater" : {
+      "amount" : 390.0,
+      "unit" : "GRAM"
+    },
+    "lasagneplattor" : {
+      "amount" : 9.0,
+      "unit" : "ST"
+    },
+    "grönsaksbuljong" : {
+      "amount" : 1.0,
+      "unit" : "ST"
+    },
+    "vegofärs" : {
+      "amount" : 500.0,
+      "unit" : "GRAM"
+    },
+    "vetemjöl" : {
+      "amount" : 6.0,
+      "unit" : "MSK"
+    },
+    "tomatpuré" : {
+      "amount" : 4.0,
+      "unit" : "MSK"
+    },
+    "vitlök" : {
+      "amount" : 2.0,
+      "unit" : "ST"
+    },
+    "mjölk" : {
+      "amount" : 10.0,
+      "unit" : "DL"
+    },
+    "parmesan" : {
+      "amount" : 2.0,
+      "unit" : "DL"
+    }
+  }
+} ]
