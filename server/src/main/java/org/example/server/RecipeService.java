@@ -4,7 +4,9 @@ import org.example.shared.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class RecipeService {
@@ -13,17 +15,20 @@ public class RecipeService {
     private RecipeRepository recipeRepo;
     @Autowired
     private IngredientRepository ingredientRepo;
+    @Autowired
+    private IngredientService ingredientService;
 
     public Recipe saveRecipeWithIngredients(Recipe recipeToSave) {
-        // Kontrollera varje ingrediens i receptet
-        recipeToSave.getIngredients().forEach((ingredientName, amount) -> {
-            // Om ingrediensen inte finns i databasen, spara den först
-            if (!ingredientRepo.existsByName(ingredientName.getName())) {
-                ingredientRepo.save(new Ingredient(ingredientName.getName()));
-            }
-        });
+        Map<Ingredient, Recipe.IngredientAmount> syncedMap = new HashMap<>();
 
-        // Spara sedan hela receptet
+        recipeToSave.getIngredients().forEach((ing, amount) -> {
+            // Använd findByNameIgnoreCase (från ditt Repository) för att vara säker
+            Ingredient realIng = ingredientRepo.findByNameIgnoreCase(ing.getName().trim())
+                    .orElseGet(() -> ingredientService.getOrCreateIngredient(ing.getName()));
+            syncedMap.put(realIng, amount);
+        });
+        recipeToSave.getIngredients().clear();
+        recipeToSave.setIngredients(syncedMap);
         return recipeRepo.save(recipeToSave);
     }
 
