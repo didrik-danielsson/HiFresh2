@@ -21,7 +21,7 @@ function SearchIcon() {
 
     return (
         <div className={"searchContainer"}>
-            <Textbox inputText={"Sök efter recept"} />
+            <Textbox inputText={"Sök efter recept"} className={"searchInput"}/>
             <FontAwesomeIcon
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}

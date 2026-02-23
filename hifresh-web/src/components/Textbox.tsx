@@ -1,13 +1,22 @@
-import {useState} from "react";
+import './textBox.css'
 
-export function Textbox(props: {inputText: string}) {
 
-    const [text, setText] = useState("")
+interface TextboxProps {
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    inputText: string;
+    className?: string;
+    type?: string;
+}
 
-        return (
-    <>
-    <input placeholder={props.inputText} className={"searchInput"}  onChange={(e) => setText(e.target.value)}></input>
-        <p>{text}</p>
-    </>
-        )
+export function Textbox({ value, onChange, inputText, className, type = "text" }: TextboxProps) {
+    return (
+        <input
+            type={type}
+            value={value}
+            onChange={onChange}
+            placeholder={inputText}
+            className={className}
+        />
+    );
 }

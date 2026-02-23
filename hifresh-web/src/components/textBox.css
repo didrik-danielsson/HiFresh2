@@ -1,0 +1,17 @@
+.loginInput {
+
+    height: 100%;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.passWordInput {
+    height: 100%;
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 100%;
+    -webkit-text-security: disc;
+}
