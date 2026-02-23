@@ -25,3 +25,16 @@
     color: white;
 }
 
+.submitButton {
+
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 550;
+    padding: 10px 15px;
+    transition: 0.3s ease-out;
+    border-radius: 6px;
+    user-select: none;
+    height: fit-content;
+    width: fit-content;
+}

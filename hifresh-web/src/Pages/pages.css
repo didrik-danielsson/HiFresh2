@@ -1,0 +1,77 @@
+.oneRecipePage {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Ingredienser tar 1 del, beskrivning 2 delar */
+    gap: 40px;
+    margin-top: 20px;
+}
+
+/* Mobilanpassning */
+@media (max-width: 600px) {
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ingredients-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients-section li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.description-section ol {
+    padding-left: 20px;
+}
+
+.step-item {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.loginPageRoot {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 65px;
+}
+
+.loginCredentials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    user-select: none;
+    justify-content: center;
+}
+.addRecipeRoot {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 40px;
+}
+.addRecipeFormRoot {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    user-select: none;
+    justify-content: center;
+}
