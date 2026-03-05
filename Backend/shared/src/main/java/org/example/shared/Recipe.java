@@ -1,20 +1,23 @@
 package org.example.shared;
 
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Entity
 public class Recipe {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String id;
 
     private String name;
 
-    @Column(columnDefinition = "TEXT[]")
-    private String[] description;
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<String> description = new ArrayList<>();
 
     @ElementCollection
     @CollectionTable(
@@ -22,31 +25,40 @@ public class Recipe {
             joinColumns = @JoinColumn(name = "recipe_id")
     )
     @MapKeyJoinColumn(name = "ingredient_id")
-    @AttributeOverrides({
-            @AttributeOverride(name = "amount", column = @Column(name = "amount")),
-            @AttributeOverride(name = "unit", column = @Column(name = "unit"))
-    })
-    Map<Ingredient, IngredientAmount> ingredients = new HashMap<>();
+    private Map<Ingredient, IngredientAmount> ingredients = new HashMap<>();
+
 
     public Recipe() {}
 
     public Recipe(String name) {
         this.name = name;
-        this.description = new String[0];
     }
 
-    public Recipe(String name, String[] description) {
+    public Recipe(String name, List<String> description) {
         this.name = name;
         this.description = description;
     }
 
-    @Embeddable
-    public record IngredientAmount(double amount, @Enumerated(EnumType.STRING) Unit unit) {
-        public IngredientAmount() { this(0, null); } // Krävs för deserialisering
-    }
 
-    public void addIngredient(Ingredient ingredientName, double amount, Unit unit) {
-        ingredients.put(ingredientName, new IngredientAmount(amount, unit));
+    @Embeddable
+    public static class IngredientAmount {
+        private double amount;
+
+        @Enumerated(EnumType.STRING)
+        private Unit unit;
+
+        public IngredientAmount() {}
+
+        public IngredientAmount(double amount, Unit unit) {
+            this.amount = amount;
+            this.unit = unit;
+        }
+
+
+        public double getAmount() { return amount; }
+        public void setAmount(double amount) { this.amount = amount; }
+        public Unit getUnit() { return unit; }
+        public void setUnit(Unit unit) { this.unit = unit; }
     }
 
     public void removeIngredient(Ingredient ingredient, double amount, Unit unit) {
@@ -79,17 +91,17 @@ public class Recipe {
         return name;
     }
 
-    public Long getId(){return id;}
+    public String getId(){return id;}
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String[] getDescription() {
+    public List<String> getDescription() {
         return description;
     }
 
-    public void setDescription(String[] description) {
+    public void setDescription(List<String> description) {
         this.description = description;
     }
 
