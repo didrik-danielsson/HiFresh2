@@ -1,0 +1,26 @@
+.heroAreaRoot{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 17px;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: fit-content;
+    background-color: cornflowerblue;
+    border-top: 5px white;
+}
+
+.searchContainer {
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.searchButton {
+    padding: 13px;
+    border-radius: 6px;
+    font-size: 21px;
+    cursor: pointer;
+    user-select: none;
+}
