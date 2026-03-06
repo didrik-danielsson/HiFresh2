@@ -1,0 +1,66 @@
+.menuButton {
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 550;
+    padding: 10px 15px;
+    transition: 0.3s ease-out;
+    border-radius: 6px;
+    user-select: none;
+    height: fit-content;
+    width: fit-content;
+}
+
+.singleMenuItem{
+    display: flex;
+    border: 1px black;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+
+}
+.menuButton:hover{
+    background-color: #007bff;
+    color: white;
+}
+
+.submitButton {
+
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 550;
+    padding: 10px 15px;
+    transition: 0.3s ease-out;
+    border-radius: 6px;
+    user-select: none;
+    height: fit-content;
+    width: fit-content;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background-color: #eee;
+    margin: 4px 0;
+}
+
+.logout-button {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    background: transparent;
+    text-align: left;
+    font-weight: 500;
+    color: #555;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #fff5f5; /* Väldigt ljus röd */
+    color: #007bff; /* "Varningsröd" */
+}
+
+.remove-button {
+    display: none;
+}

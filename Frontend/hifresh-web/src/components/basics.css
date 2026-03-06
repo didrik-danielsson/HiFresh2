@@ -1,0 +1,19 @@
+.labels {
+    display: flex;
+    flex-direction: row; /* Rad-format */
+    gap: 20px;
+    align-items: flex-start; /* Linjera toppen av label-texten */
+    width: 100%;
+}
+
+.labels > select,
+.labels > div {
+    flex: 1;
+}
+
+.char-counter {
+    font-size: 9px;
+    color: #00000b;
+    text-align: right;
+    margin-top: 2px;
+}

@@ -1,0 +1,115 @@
+.headerAreaRoot{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.logoRootContainer {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+    justify-content: start;
+    flex: 1;
+}
+
+.logo{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.websiteName{
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.loginRootContainer {
+
+}
+.loginButton{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 3px solid black;
+    font-size: 16px;
+    font-weight: 550;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s ease-out;
+
+}
+.loginButton:hover {
+    color: white;
+}
+
+.mainMenuRootContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+    height: fit-content;
+    flex: 1;
+
+}
+
+.mainMenuAndLoginButton {
+    display: flex;
+    flex: 2;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    gap: 365px;
+
+}
+
+.mainMenuAndUserIcon {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    position: relative;
+    gap: 525px;
+}
+
+.userIcon {
+    padding: 13px;
+    border-radius: 6px;
+    font-size: 21px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.userIconDropDown {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.userIcondropdownContent a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.userIcon:hover .dropdownContent {
+    display: block;
+}
+
+.userIcondropdownContent a:hover {
+    background-color: #f1f1f1;
+}
+
+
