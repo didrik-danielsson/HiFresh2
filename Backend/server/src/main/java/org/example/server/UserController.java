@@ -24,7 +24,7 @@ public class UserController {
             userService.registerUser(request.getUsername(), request.getPassword());
             return ResponseEntity.ok("Användare registrerad!");
         } catch (IllegalArgumentException e) {
-            // Här fångas dina felmeddelanden från UserService (t.ex. för kort lösenord)
+
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }

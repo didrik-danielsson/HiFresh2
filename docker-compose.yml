@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:16-alpine
+    container_name: hifresh-db
+    environment:
+      POSTGRES_DB: hifresh_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Appleman6254!
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - hifresh-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Spring Boot Backend
+  backend:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    container_name: hifresh-backend
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/hifresh_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: Appleman6254!
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - hifresh-network
+    restart: unless-stopped
+
+  # React Frontend
+  frontend:
+    build:
+      context: ./Frontend/hifresh-web
+      dockerfile: Dockerfile
+    container_name: hifresh-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - hifresh-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  hifresh-network:
+    driver: bridge
