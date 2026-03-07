@@ -47,7 +47,7 @@ services:
     volumes:
       - ./Frontend/hifresh-web/src:/app/src
     environment:
-      - NODE_env=development
+      - NODE_ENV=development
 
 volumes:
   postgres_data_dev:
