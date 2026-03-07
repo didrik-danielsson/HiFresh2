@@ -26,7 +26,7 @@ export function LoginPage() {
         if (result.success) {
             navigate("/");
         } else {
-            setError(result.message);
+            setError(result.message || "Inloggning misslyckades");
         }
     };
 

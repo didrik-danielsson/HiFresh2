@@ -1,6 +1,6 @@
 import './featurearea.css';
-import type {Recipe} from '../types/index.ts'
-import {backgroundColor, mainColor} from "../colors.ts";
+import type {Recipe} from '../../types'
+import {backgroundColor} from "../colors.ts";
 import {RecipeCard} from "../RecipeCard.tsx";
 
 interface FeatureAreaProps {
