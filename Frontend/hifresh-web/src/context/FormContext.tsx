@@ -1,5 +1,5 @@
-import { createContext, useState, useEffect, ReactNode } from "react";
-import type {ChangeEvent} from "react";
+import { createContext, useState } from "react";
+import type {ChangeEvent, ReactNode} from "react";
 
 
 interface FormContextType {
@@ -25,6 +25,7 @@ interface RecipeData {
     baseDescription: string;
     ingredients: string;
     instructions: string;
+    [key: string]: string | number | boolean;
 }
 
 export const FormContext = createContext<FormContextType | undefined>(undefined);
@@ -49,12 +50,12 @@ export const FormProvider = ({ children }: { children: ReactNode })=> {
 
     })
 
-    const handleChange = e => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const type = e.target.type
         const name = e.target.name
 
         const value = type == "checkbox"
-            ? e.target.checked
+            ? (e.target as HTMLInputElement).checked
             : e.target.value
 
         setData(prevData => ({
@@ -108,7 +109,7 @@ export const FormProvider = ({ children }: { children: ReactNode })=> {
             title, page, setPage,
             data, setData, handleChange,
             disablePrev,disableNext,prevHide
-            , nextHide, submitHide
+            , nextHide, submitHide, canSubmit
         }}>
             {children}
         </FormContext.Provider>

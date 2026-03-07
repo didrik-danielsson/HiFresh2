@@ -1,6 +1,6 @@
 import './header.css';
 import { useState } from 'react';
-import { faUtensils, faUser,faBars } from "@fortawesome/free-solid-svg-icons"
+import { faUtensils, faUser } from "@fortawesome/free-solid-svg-icons"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {mainColor} from "../colors.ts";
 import {backgroundColor} from "../colors.ts";
@@ -12,12 +12,7 @@ import { Button } from "../button.tsx";
 
 
 function Header() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { isLoggedIn, logout } = useAuth();
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+    const { isLoggedIn } = useAuth();
     return (
         <div style={{backgroundColor:`${mainColor}`}} className={"headerAreaRoot"}>
             <Logo />

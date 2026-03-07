@@ -27,7 +27,7 @@ export function DropdownMenu({title, items}: DropDownMenuProps) {
                     className="menuButton" />
             </Link>
             <div className="dropdownContent">
-                {items.map((item, i) => (
+                {items?.map((item, i) => (
                     <Link key={i} to={`/${item.toLowerCase()}`}>{item}</Link>
                 ))}
             </div>

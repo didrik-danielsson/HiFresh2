@@ -1,7 +1,7 @@
 import './TextArea.css'
 interface TextAreaProps {
     value?: string;
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
     inputText: string;
     className?: string;
     type?: string;
@@ -9,22 +9,19 @@ interface TextAreaProps {
     name?: string
     checked?: string
     pattern?: string
-    disabled?: string
+    disabled?: boolean
     maxLength?: number;
 }
 
-export function TextArea({ value, onChange, inputText, className, type, id, name, checked, pattern, disabled, maxLength}: TextAreaProps) {
+export function TextArea({ value, onChange, inputText, className, id, name, disabled, maxLength}: TextAreaProps) {
     return (
         <textarea
-            type={type}
             value={value}
             onChange={onChange}
             placeholder={inputText}
             className={className}
             id={id}
             name={name}
-            checked={checked}
-            pattern={pattern}
             disabled={disabled}
             maxLength={maxLength}
         />

@@ -10,9 +10,9 @@ interface TextboxProps {
     type?: string;
     id?: string
     name?: string
-    checked?: string
+    checked?: boolean
     pattern?: string
-    disabled?: string
+    disabled?: boolean
     maxLength?: number;
 }
 
