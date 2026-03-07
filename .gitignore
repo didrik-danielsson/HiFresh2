@@ -3,6 +3,16 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 .kotlin
+# Environment files
+.env.local
+.env.*.local
+
+# Doccker
+*.log
+
+# Node
+node_modules/
+dist/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
