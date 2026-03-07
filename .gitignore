@@ -7,6 +7,9 @@ target/
 .env.local
 .env.*.local
 
+# Local Spring Boot config (not for Docker)
+application-local.properties
+
 # Doccker
 *.log
 
