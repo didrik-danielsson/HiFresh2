@@ -35,7 +35,7 @@ export const recipeService = {
         return await response.json();
     },
 
-    async createRecipe(recipeData: { title: string; description: string; ingredients: string; instructions: string }) {
+    async createRecipe(recipeData: { title: string; description: string; ingredients: string; instructions: string; category?: string; time?: string; portions?: number }) {
 
         const response = await fetch(API_BASE_URL, {
             method: "POST",

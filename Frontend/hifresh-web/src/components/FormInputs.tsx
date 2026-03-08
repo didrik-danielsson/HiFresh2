@@ -2,7 +2,8 @@ import useFormContext from "../Hooks/useFormContext.tsx";
 import Basics from "./Basics.tsx";
 import Ingredients from "./Ingredients.tsx";
 import HowTo from "./HowTo.tsx";
-import type {JSX} from "react";
+import type {JSX} from "react"
+
 
 
 

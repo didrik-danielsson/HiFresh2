@@ -67,6 +67,7 @@
     margin: 0 auto;
     gap: 40px;
 }
+
 .addRecipeFormRoot {
     display: flex;
     flex-direction: column;

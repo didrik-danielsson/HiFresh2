@@ -1,4 +1,6 @@
 import './DropDownLabel.css'
+import type {IconDefinition} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 interface DropdownLabelProps {
     label?: string;
@@ -8,12 +10,15 @@ interface DropdownLabelProps {
     onChange?: (e: any) => void;
     id?: string;
     className?: string
+    icon?: IconDefinition;
 }
- export function DropdownLabel({ label, name, values, id, onChange, className, value }: DropdownLabelProps) {
+ export function DropdownLabel({ label, name, values, id, onChange, className, value, icon }: DropdownLabelProps) {
      return (
     <div>
-         <label>{label}</label>
-     <select id={id} name={name} value={value} onChange={onChange} className={className}>
+         <label>
+             <FontAwesomeIcon icon={icon} style={{ marginRight: '8px' }} />
+             {label}</label>
+     <select  id={id} name={name} value={value} onChange={onChange} className={className}>
          {values.map((optionNum) => (
          <option key={optionNum} value={optionNum}>
              {optionNum}

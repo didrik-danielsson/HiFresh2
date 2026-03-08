@@ -1,5 +1,4 @@
 import './textBox.css'
-import './TextArea.css'
 
 
 interface TextboxProps {

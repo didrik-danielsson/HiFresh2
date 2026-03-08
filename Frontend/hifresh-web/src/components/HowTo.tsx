@@ -9,7 +9,8 @@ const HowTo = () => {
 
     const content = (
         <>
-            <TextArea name="instructions" value={data.instructions} inputText={"Skriv instruktionerna här!"} className={"descriptionForm"} onChange={handleChange}/>
+            <TextArea name="instructions" value={data.instructions} inputText={"Skriv instruktionerna här!"} className={"descriptionForm"}
+                      onChange={handleChange}/>
         </>
     )
 

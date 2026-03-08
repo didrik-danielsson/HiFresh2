@@ -69,6 +69,9 @@ export const FormProvider = ({ children }: { children: ReactNode })=> {
         ingredients,
         baseDescription,
         instructions,
+        basePortions,
+        baseTime,
+        baseCategory,
         ...requiredInputs
     } = data
 

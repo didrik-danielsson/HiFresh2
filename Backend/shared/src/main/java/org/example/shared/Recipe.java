@@ -16,6 +16,12 @@ public class Recipe {
 
     private String name;
 
+    private String category;
+
+    private String time;
+
+    private int portions;
+
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> description = new ArrayList<>();
 

@@ -27,7 +27,7 @@ export function AddRecipeForm() {
         <div className="addRecipeRoot">
             <h1>Skapa nytt recept</h1>
             <FormProvider>
-            <Form onSubmit={handleSubmit} className={"addRecipeForm"}/>
+            <Form onSubmit={handleSubmit} className={"addRecipeFormRoot"}/>
             </FormProvider>
         </div>
     );

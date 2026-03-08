@@ -17,3 +17,10 @@
     text-align: right;
     margin-top: 2px;
 }
+
+.name-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 75vh;
+}

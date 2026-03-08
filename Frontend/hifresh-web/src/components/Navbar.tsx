@@ -6,8 +6,8 @@ import {DropdownMenu} from "./DropDownMenu.tsx";
 export function Navbar(){
 
     const recipeMenu = {title: "Recept", items: ["Lägg till recept", "Ändra recept",  "Ta bort recept"]}
-    const menuMenu = {title: "Menyer", items: ["Veckomeny", "Festmenyer"]}
-    const ingredientsMenu = {title: "Ingredienser", items: ["Visa alla", "Kategorier"]}
+    const menuMenu = {title: "Menyer", items: ["Skapa en ny veckomeny", "Gamla menyer"]}
+    const ingredientsMenu = {title: "Inköpslista", items: ["Nuvarande", "Gamla"]}
 
     return (
     <nav className={"navBar"} >

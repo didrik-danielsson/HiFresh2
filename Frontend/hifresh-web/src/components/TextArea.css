@@ -1,4 +1,5 @@
-.newRecipeInput,
+.instructionsForm,
+.ingredientsForm,
 .descriptionForm {
     width: 100%;
     padding: 10px 12px;
@@ -12,15 +13,12 @@
     display: block;
     outline: none;
     transition: border-color 0.2s;
-}
-
-.descriptionForm {
     resize: none;
     min-height: 100px;
     vertical-align: top;
 }
 
-.newRecipeInput:focus,
+.ingredientsForm:focus,
 .descriptionForm:focus {
     border-color: #007bff;
 }

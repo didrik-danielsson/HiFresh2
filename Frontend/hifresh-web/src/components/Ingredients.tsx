@@ -7,7 +7,8 @@ const Ingredients = () => {
 
     const content = (
        <>
-           <TextArea name="instructions" value={data.ingredients} inputText={"Skriv in ingredienser här!"} className={"descriptionForm"}
+           <TextArea name="ingredients" value={data.ingredients}
+                     inputText={"Skriv in ingredienser här!"} className={"ingredientsForm"}
            onChange={handleChange}/>
        </>
     )
