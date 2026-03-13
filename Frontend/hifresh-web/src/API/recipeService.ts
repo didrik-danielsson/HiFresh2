@@ -1,4 +1,4 @@
-import type {Ingredient, IngredientAmount, Recipe} from '../types';
+import type { IngredientAmount, Recipe} from '../types';
 
 const API_BASE_URL: string = import.meta.env.VITE_RECIPES_API_BASE_URL;
 
@@ -38,7 +38,7 @@ export const recipeService = {
     async createRecipe(recipeData: {
         title: string;
         description: string;
-        ingredients: Record<Ingredient, IngredientAmount>
+        ingredients: Record<string, IngredientAmount>;
         instructions: string;
         portions: number;
         time: string;

@@ -50,6 +50,7 @@ public class Recipe {
 
     @Embeddable
     public static class IngredientAmount {
+
         private double amount;
 
         @Enumerated(EnumType.STRING)

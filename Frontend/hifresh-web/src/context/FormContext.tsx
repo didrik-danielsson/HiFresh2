@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import type {ChangeEvent, ReactNode} from "react";
-import type {Ingredient, IngredientAmount} from "../types";
+import type { IngredientAmount} from "../types";
 
 
 interface FormContextType {
@@ -24,7 +24,7 @@ interface RecipeData {
     basePortions: number;
     baseCategory: string;
     baseDescription: string;
-    ingredients: Record<Ingredient, IngredientAmount>;
+    ingredients: Record<string, IngredientAmount>;
     instructions: string;
 }
 

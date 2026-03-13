@@ -16,21 +16,13 @@ const Ingredients = () => {
     const addIngredient = () => {
         if (!currentName.trim()) return;
 
-        const newIngredientObj: Ingredient = {
-            name: currentName.trim()
-        }
-
-        const newAmountObj:IngredientAmount = {
-            amount: currentAmount,
-            unit: currentUnit
-        }
-
         setData(prev => ({
             ...prev,
             ingredients: {
                 ...prev.ingredients,
-                [newIngredientObj]: {
-                   newAmountObj
+                [currentName.trim()]: {
+                    amount: currentAmount,
+                    unit: currentUnit
                 }
             }
         }));

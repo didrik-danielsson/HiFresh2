@@ -14,7 +14,7 @@ export function AddRecipeForm() {
                 description: data.baseDescription,
                 ingredients: data.ingredients,
                 instructions: data.instructions,
-                portions: data.basePortions,
+                portions: Number(data.basePortions),
                 time: data.baseTime,
                 category: data.baseCategory,
 

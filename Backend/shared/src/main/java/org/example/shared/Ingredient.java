@@ -2,6 +2,7 @@ package org.example.shared;
 
 
 import jakarta.persistence.*;
+import java.util.Objects;
 
 @Entity
 public class Ingredient{
@@ -18,6 +19,19 @@ public class Ingredient{
     public Ingredient(String name){
         this.name = standardName(name);
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Ingredient that = (Ingredient) o;
+        return Objects.equals(name, that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 
     public String getName(){
