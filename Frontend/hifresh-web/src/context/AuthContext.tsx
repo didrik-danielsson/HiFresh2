@@ -1,5 +1,5 @@
 // src/context/AuthContext.tsx
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import type { ReactNode } from 'react';
 import { UserService } from "../API/LoginService";
 import { toast } from "react-hot-toast";
@@ -10,6 +10,7 @@ interface AuthContextType {
     user: string | null;
     login: (username: string, password: string) => Promise<LoginResponse>;
     logout: () => void;
+    loading: boolean;
 }
 interface LoginResponse {
     success: boolean;
@@ -20,8 +21,28 @@ interface LoginResponse {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
+
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [user, setUser] = useState<string | null>(null);
+    const [ loading, setLoading ] = useState(true);
+
+    useEffect(() => {
+        const checkAuthentication = async () => {
+            try {
+                const authenticatedUser = await UserService.checkAuth()
+                if (authenticatedUser) {
+                    setIsLoggedIn(true);
+                    setUser(authenticatedUser);
+                }
+                setLoading(false);
+            } catch (error) {
+                setLoading(false);
+            } finally {
+                setLoading(false);
+            }
+        };
+        checkAuthentication();
+    }, []);
 
     const login = async (username: string, password: string) => {
         try {
@@ -48,7 +69,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     return (
 
-        <AuthContext.Provider value={{ isLoggedIn, user, login, logout: handleLogout }}>
+        <AuthContext.Provider value={{ isLoggedIn, user, login, logout: handleLogout, loading }}>
             {children}
         </AuthContext.Provider>
     );

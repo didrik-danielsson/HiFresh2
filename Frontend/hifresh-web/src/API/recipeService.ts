@@ -1,4 +1,4 @@
-import type {Recipe} from '../types';
+import type {Ingredient, IngredientAmount, Recipe} from '../types';
 
 const API_BASE_URL: string = import.meta.env.VITE_RECIPES_API_BASE_URL;
 
@@ -35,7 +35,15 @@ export const recipeService = {
         return await response.json();
     },
 
-    async createRecipe(recipeData: { title: string; description: string; ingredients: string; instructions: string; category?: string; time?: string; portions?: number }) {
+    async createRecipe(recipeData: {
+        title: string;
+        description: string;
+        ingredients: Record<Ingredient, IngredientAmount>
+        instructions: string;
+        portions: number;
+        time: string;
+        category: string;
+    }) {
 
         const response = await fetch(API_BASE_URL, {
             method: "POST",

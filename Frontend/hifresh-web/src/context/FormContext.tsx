@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import type {ChangeEvent, ReactNode} from "react";
+import type {Ingredient, IngredientAmount} from "../types";
 
 
 interface FormContextType {
@@ -23,10 +24,10 @@ interface RecipeData {
     basePortions: number;
     baseCategory: string;
     baseDescription: string;
-    ingredients: string;
+    ingredients: Record<Ingredient, IngredientAmount>;
     instructions: string;
-    [key: string]: string | number | boolean;
 }
+
 
 export const FormContext = createContext<FormContextType | undefined>(undefined);
 
@@ -42,10 +43,10 @@ export const FormProvider = ({ children }: { children: ReactNode })=> {
     const [data, setData] = useState<RecipeData>({
         baseName: "",
         baseTime: "",
-        basePortions: 0,
+        basePortions: 2,
         baseCategory: "",
         baseDescription: "",
-        ingredients: "",
+        ingredients: {},
         instructions: ""
 
     })
@@ -62,6 +63,7 @@ export const FormProvider = ({ children }: { children: ReactNode })=> {
             ...prevData,
             [name]: value
         }))
+        console.log(data)
     }
 
     const {
@@ -78,17 +80,9 @@ export const FormProvider = ({ children }: { children: ReactNode })=> {
     const canSubmit = [...Object.values(requiredInputs)].every(Boolean)
         && page === Object.keys(title).length - 1
 
-    const canNextPage1 = Object.keys(data)
-        .filter(key => key.startsWith('Base') && key !== 'baseName')
-        .map(key => data[key]).every(Boolean)
-
-    const canNextPage2 = Object.keys(data)
-        .filter(key => key.startsWith('Ing') && key !== 'Ingredients')
-        .map(key => data[key]).every(Boolean)
-
-    const canNextPage3 = Object.keys(data)
-        .filter(key => key.startsWith('Ins') && key !== 'Instructions')
-        .map(key => data[key]).every(Boolean)
+    const canNextPage1 = data.baseName.length > 0 && data.baseDescription.length > 0;
+    const canNextPage2 = Object.keys(data.ingredients).length > 0; // Kolla om det finns ingredienser
+    const canNextPage3 = data.instructions.trim().length > 10; // Kräver lite instruktioner
 
     const disablePrev = page === 0
 

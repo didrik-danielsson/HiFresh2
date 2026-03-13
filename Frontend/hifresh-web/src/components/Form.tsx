@@ -20,15 +20,21 @@ const Form = ({onSubmit, className}: FormProps) => {
         disableNext,
         submitHide,
         prevHide,
-        nextHide
+        nextHide,
+        data
     } = useFormContext()
+
+    const internalSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        onSubmit(data)
+    }
 
     const handlePrev = () => setPage(prev => prev - 1)
     const handleNext = () => setPage(prev => prev + 1)
 
     const content = (
 
-        <form onSubmit={onSubmit} className={className} >
+        <form onSubmit={internalSubmit} className={className} >
             <header>
                 <h2>{title[page]}</h2>
             </header>

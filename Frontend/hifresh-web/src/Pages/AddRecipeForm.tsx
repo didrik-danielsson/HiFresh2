@@ -9,10 +9,15 @@ export function AddRecipeForm() {
     const handleSubmit = async (data: any) => {
         try {
             await recipeService.createRecipe({
+
                 title: data.baseName,
                 description: data.baseDescription,
                 ingredients: data.ingredients,
-                instructions: data.instructions
+                instructions: data.instructions,
+                portions: data.basePortions,
+                time: data.baseTime,
+                category: data.baseCategory,
+
             });
 
             alert("Receptet sparat!");

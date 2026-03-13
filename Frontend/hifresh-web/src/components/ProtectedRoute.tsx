@@ -10,17 +10,21 @@ interface ProtectedRouteProps {
 
 export function ProtectedRoute({ children }: ProtectedRouteProps) {
     const navigate = useNavigate();
-    const { isLoggedIn } = useAuth();
+    const { isLoggedIn, loading } = useAuth();
 
     useEffect(() => {
-        if (!isLoggedIn) {
+        if (!loading && !isLoggedIn) {
             toast.error("Du måste vara inloggad för att se denna sida", {
-                id: "auth-error", // Detta ID gör att det bara kan finnas EN sån här toast åt gången
+                id: "auth-error",
                 duration: 4000,
             });
             navigate("/", { replace: true });
         }
-    }, [isLoggedIn, navigate]);
+    }, [isLoggedIn, loading, navigate]);
+
+    if (loading) {
+        return <div>Laddar...</div>;
+    }
 
     return <>{children}</>;
 }

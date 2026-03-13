@@ -2,7 +2,7 @@ import './textBox.css'
 
 
 interface TextboxProps {
-    value?: string;
+    value?: string | number;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     inputText: string;
     className?: string;
