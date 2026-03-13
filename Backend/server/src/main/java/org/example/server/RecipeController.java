@@ -11,12 +11,8 @@ import java.util.List;
 @RequestMapping("/api/recipes")
 public class RecipeController {
 
-    public String testServer() {
-        return "Servern är uppe och svarar!";
-    }
-
     @Autowired
-    private final RecipeService recipeService = new RecipeService();
+    private RecipeService recipeService;
 
     //Post-metod
     @PostMapping

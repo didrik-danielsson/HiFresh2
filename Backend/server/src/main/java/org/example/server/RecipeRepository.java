@@ -11,9 +11,9 @@ import java.util.List;
 @Repository
 public interface RecipeRepository extends JpaRepository<Recipe, Long> {
 
-    Recipe existsByName(String recipeName);
-    // Här får du automatiskt metoder som .save(), .findAll(), .deleteById()
+    Recipe findByName(String recipeName);
 
-    // I RecipeRepository.java
+    boolean existsByNameIgnoreCase(String recipeName);
+
     List<Recipe> findByNameNotIn(Collection<String> names);
 }

@@ -20,10 +20,9 @@ public class Recipe {
 
     private String time;
 
-    private int portions;
+    private Integer portions;
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    private List<String> description = new ArrayList<>();
+    private String description;
 
     @ElementCollection
     @CollectionTable(
@@ -40,9 +39,12 @@ public class Recipe {
         this.name = name;
     }
 
-    public Recipe(String name, List<String> description) {
+    public Recipe(String name,String description, String category, String time, Integer portions) {
         this.name = name;
         this.description = description;
+        this.category = category;
+        this.time = time;
+        this.portions = portions;
     }
 
 
@@ -72,7 +74,7 @@ public class Recipe {
     }
 
     public String toString() {
-        return name + "\nGör så här: " + descriptionToString() + "\nIngredienser: " + ingredientsToString();
+        return name + "\nGör så här: " + getDescription() + "\nIngredienser: " + ingredientsToString();
     }
 
     public String ingredientsToString() {
@@ -84,14 +86,6 @@ public class Recipe {
         return sb.toString();
     }
 
-    private String descriptionToString() {
-        StringBuilder descriptionString = new StringBuilder();
-
-        for(String s : description) {
-            descriptionString.append(s + "\n");
-        }
-        return descriptionString.toString();
-    }
 
     public String getName(){
         return name;
@@ -103,11 +97,11 @@ public class Recipe {
         this.name = name;
     }
 
-    public List<String> getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(List<String> description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 

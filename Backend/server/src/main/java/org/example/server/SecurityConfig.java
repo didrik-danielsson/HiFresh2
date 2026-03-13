@@ -33,7 +33,7 @@ public class SecurityConfig {
                         })
                 )
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/users/register", "/api/users/login").permitAll()
+                        .requestMatchers("/api/users/register", "/api/users/login", "/api/users/logout").permitAll()
                         .anyRequest().authenticated() // Detta täcker /api/users/me
                 )
                 // LÄGG TILL DETTA: Detta tvingar Spring att kolla dina Basic-credentials
